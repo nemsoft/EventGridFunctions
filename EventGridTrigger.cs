@@ -21,6 +21,7 @@ namespace EventGrid.Function
         public void Run([EventGridTrigger] CloudEvent cloudEvent)
         {
             _logger.LogInformation("Event type: {type}, Event subject: {subject}", cloudEvent.Type, cloudEvent.Subject);
+            _logger.LogInformation("My custom message from the funtion.");
         }
     }
 }
